@@ -1,57 +1,56 @@
 body {
-    height: 100%; /* Ensure body and html take up full height */
-    margin: 0; /* Remove default margin */
-    background-color: black; /* Full black background for the page */
-    color: white; /* White text for better contrast */
-    font-family: Arial, sans-serif; /* Optional: Set a readable font */
+    height: 100%;
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
 }
+
 .container {
-    display: flex; /* Use Flexbox to align items side by side */
-    gap: 2%; /* Space between rectangles */
-    width: 100%; 
-    padding-top: 3%;/* Full width of the container */
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 3%;
     padding-left: 2%;
     padding-right: 2%;
+    gap: 2%;
 }
+
 .rectangle {
-    position: fixed; /* Fix position of the left rectangle */
-    
-    border: 2px solid rgb(248, 248, 248); /* Border for the rectangle */
-    width: 20%; /* Width of the left rectangle */
-    height: 90%; /* Full height to cover the viewport */
-    padding: 2%; /* Space inside the rectangle */
-    box-sizing: border-box; 
+    border: 2px solid rgb(248, 248, 248);
+    width: 20%;
+    padding: 2%;
+    box-sizing: border-box;
     border-radius: 15px;
-    background-color: rgb(31, 27, 27, 0.514);
-    animation: slideInRights 1s forwards
+    background-color: rgba(31, 27, 27, 0.514);
+    animation: slideInRight 1s forwards;
 }
 
 .rectangle1 {
-    margin-left: 22%; /* Adjust to fit beside the fixed rectangle */
-    border: 2px solid rgb(248, 248, 248); /* Border for the rectangle */
-    width: 78%; /* Adjust width considering margin for the fixed rectangle */
-    padding: 2%; /* Space inside the rectangle */
-    box-sizing: border-box; 
+    flex: 1;
+    border: 2px solid rgb(248, 248, 248);
+    padding: 2%;
+    box-sizing: border-box;
     border-radius: 15px;
-    background-color: rgb(31, 27, 27, 0.514);
-     /* Full height to cover the viewport */
-    overflow-y: auto; /* Enable vertical scrolling */
-    margin-right:5%;
-    animation: slideInRights 1s forwards
-   
+    background-color: rgba(31, 27, 27, 0.514);
+    overflow-y: auto;
+    animation: slideInRight 1s forwards;
 }
+
 .srectangle1 {
     border: 2px solid rgb(248, 248, 248);
-    box-sizing: border-box; 
+    box-sizing: border-box;
     border-radius: 15px;
-    background-color: rgb(31, 27, 27, 0.514);
-    width: 50%;
+    background-color: rgba(31, 27, 27, 0.514);
+    width: 100%;
     padding: 2%;
-    animation: slideInRight 1s forwards
+    animation: slideInRight 1s forwards;
 }
+
 .icon {
     vertical-align: middle;
 }
+
 .phone-heading {
     display: inline-block;
     vertical-align: middle;
@@ -59,57 +58,34 @@ body {
     position: relative;
     bottom: 2px;
 }
+
 .prof {
     border-radius: 50%;
-    margin-left: 10%; 
-    margin-right: 75%; 
+    margin-left: 10%;
+    margin-right: 75%;
     object-fit: cover;
 }
-.button1{
-    border-radius:13px;
-    background-color: transparent;
-    color:white;
 
+.button1 {
+    border-radius: 13px;
+    background-color: transparent;
+    color: white;
 }
-.rectangle h1, .rectangle h3{
-    margin: 5px 0; 
+
+.rectangle h1, .rectangle h3 {
+    margin: 5px 0;
 }
+
 .rectangle p {
-    margin: 5px 0; 
+    margin: 5px 0;
     margin-left: 10%;
 }
+
 .name1 {
-    font-size: 24px; /* Adjust the font size */
-    font-weight: bold; /* Make the text bold */
-    /* Change the text color */
-    margin-bottom: 10px; /* Add some space below the heading */
-    text-align: center; /* Center the text */
-}
-@keyframes slideInRights{
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-
-}
-@keyframes slideInLefts{
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-
-}
-@keyframes slideInLeft {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 @keyframes slideInRight {
@@ -118,5 +94,25 @@ body {
     }
     to {
         transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .rectangle {
+        width: 100%;
+        position: static;
+        margin-bottom: 20px;
+        animation: slideInRight 1s forwards;
+    }
+
+    .rectangle1 {
+        width: 100%;
+        margin-left: 0;
+        animation: slideInRight 1s forwards;
+    }
+
+    .srectangle1 {
+        width: 100%;
+        animation: slideInRight 1s forwards;
     }
 }
