@@ -112,7 +112,7 @@ body {
     border-radius: 20px;
     transition: all 0.3s;
     position: fixed;
-    bottom: 20px;
+    bottom: 20%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
