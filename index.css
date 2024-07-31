@@ -3,7 +3,7 @@ body {
     margin: 0;
     background-color: black;
     color: white;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
 }
 
 .container {
@@ -80,7 +80,6 @@ body {
     border-radius: 13px;
     background-color: rgba(31, 27, 27, 0.514);
     color: white;
-    box-shadow: 40%;
     transition: all 0.3s;
 }
 
@@ -98,7 +97,7 @@ body {
 }
 
 .name1 {
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
@@ -123,7 +122,7 @@ body {
 
 button {
     margin: 0 5px;
-    border: rgba(31, 27, 27, 0.514);
+    border: none;
     padding: 10px 20px;
     border-radius: 15px;
     background-color: rgba(31, 27, 27, 0.514);
