@@ -10,14 +10,13 @@ body {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    padding-top: 3%;
-    padding-left: 2%;
-    padding-right: 2%;
+    padding: 3% 2% 0;
     gap: 2%;
+    box-sizing: border-box;
 }
 
 .rectangle {
-    position: fixed; /* Fix position of the left rectangle */
+    position: fixed;
     top: 4%;
     left: 1%;
     width: 20%;
@@ -27,42 +26,39 @@ body {
     height: 80%;
     background-color: rgba(31, 27, 27, 0.514);
     animation: slideInRight 1s forwards;
-    box-sizing: border-box; 
 }
 
 .rectangle1 {
-    position: absolute;
-    margin-left: 22%; /* Adjust to fit beside the fixed rectangle */
-    /* Border for the rectangle */
-    width: 70%; /* Adjust width considering margin for the fixed rectangle */
-    padding: 2%; /* Space inside the rectangle */
-    box-sizing: border-box; 
-    border-radius: 15px;
-    background-color: rgb(31, 27, 27, 0.514);
-    right: 1%;  /* Full height to cover the viewport */
-    overflow-y: auto; /* Enable vertical scrolling */
-   animation:slideInLeft is forwards;
-}
-
-.srectangle1 {
-    
+    margin-left: 22%;
+    width: 70%;
+    padding: 2%;
     box-sizing: border-box;
     border-radius: 15px;
     background-color: rgba(31, 27, 27, 0.514);
+    right: 1%;
+    overflow-y: auto;
+    animation: slideInLeft 1s forwards;
+}
+
+.srectangle1 {
     width: 100%;
     padding: 2%;
-    gap: 2%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: rgba(31, 27, 27, 0.514);
     margin-top: 2%;
 }
 
 .icon {
     vertical-align: middle;
 }
-.button-rectangle{
+
+.button-rectangle {
     width: 10px;
     height: 100px;
-    background-color:rgba(31, 27, 27, 0.514);
+    background-color: black;
 }
+
 .phone-heading {
     display: inline-block;
     vertical-align: middle;
@@ -80,17 +76,16 @@ body {
     height: 15vw;
 }
 
-
 .button1 {
     border-radius: 13px;
-    background-color: transparent;
+    background-color: rgba(31, 27, 27, 0.514);
     color: white;
-    &.bounce:hover {
-		animation: bounce 0.5s;
-	}
-    &.bounce:hover {
-		animation: bounce 0.5s;
-	}
+    box-shadow: 40%;
+    transition: all 0.3s;
+}
+
+.button1:hover {
+    animation: bounce 0.5s;
 }
 
 .rectangle h1, .rectangle h3 {
@@ -109,47 +104,35 @@ body {
     text-align: center;
 }
 
-
 .button-container {
-    background-color:rgba(31, 27, 27, 0.514);
-   
-        
-        border: none;
-        padding: 15px 30px;
-        cursor: pointer;
-        font-size: 16px;
-        border-radius: 20px;
-        transition: all 0.3s;
-        position: fixed;
-        bottom: 20px;
-        left: 50%;
-        
-        justify-content: center;
-        align-items: center;
-        
+    background-color: rgba(0, 0, 0, 0.514);
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 20px;
+    transition: all 0.3s;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 button {
     margin: 0 5px;
-    border:rgba(31, 27, 27, 0.514);
+    border: rgba(31, 27, 27, 0.514);
     padding: 10px 20px;
     border-radius: 15px;
-    background-color:rgba(31, 27, 27, 0.514);
-    &:hover {
-		background-color: cyan;
-	}
-	&.bounce:hover {
-		animation: bounce 0.5s;
-	}
-    @keyframes bounce {
-        0%,
-        100% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-10px);
-        }
-    }
+    background-color: rgba(31, 27, 27, 0.514);
+    transition: all 0.3s;
+}
+
+button:hover {
+    background-color: cyan;
+    animation: bounce 0.5s;
 }
 
 @keyframes slideInRight {
@@ -160,6 +143,7 @@ button {
         transform: translateX(0);
     }
 }
+
 @keyframes slideInLeft {
     from {
         transform: translateY(100%);
@@ -168,17 +152,22 @@ button {
         transform: translateY(0);
     }
 }
-@media (max-width: 768px) {
-    .rectangle {
-        width: 100%;
-        position: static;
-        margin-bottom: 20px;
-        animation: slideInRight 1s forwards;
-    }
 
-    .rectangle1 {
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .rectangle, .rectangle1 {
+        position: static;
         width: 100%;
         margin-left: 0;
+        margin-bottom: 20px;
         animation: slideInRight 1s forwards;
     }
 
