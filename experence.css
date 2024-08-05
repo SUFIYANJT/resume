@@ -1,0 +1,222 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    position: relative;
+    width: 70%;
+    margin: 2%;
+    top: 10%;
+    background-color: rgba(31, 27, 27, 0.514);
+    padding: 2%;
+    border-radius: 10px;
+    margin-left: 22%;
+    padding-right: 2%;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.experience, .skills {
+    width: 100%;
+    padding: 2%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: rgba(31, 27, 27, 0.514);
+    margin-top: 2%;
+}
+
+h2, h1 {
+    text-align: left;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.timeline {
+    position: relative;
+    border-left: 2px solid #000000;
+}
+
+.job {
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.dot {
+    position: absolute;
+    left: -11px;
+    top: 0;
+    width: 13px;
+    height: 13px;
+    background-color: #ffa500;
+    border-radius: 50%;
+    border: 2px solid rgba(31, 27, 27, 0.514);
+}
+
+.details {
+    padding-left: 10px;
+}
+
+.job h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.job span {
+    display: block;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+.job p {
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill span {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+@keyframes fillBar {
+    from {
+        width: 0;
+    }
+    to {
+        width: 80%;
+    }
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: rgba(31, 27, 27, 0.514);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    animation: fillBar 2s ease-out forwards;
+}
+
+.progress {
+    height: 20px;
+    background-color: #ffa500;
+    border-radius: 5px;
+}
+
+.rectangle {
+    position: fixed;
+    top: 4%;
+    left: 1%;
+    width: 20%;
+    padding: 2%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    height: 90%;
+    background-color: rgba(31, 27, 27, 0.514);
+    animation: slideInRight 1s forwards;
+}
+
+.education-section {
+    margin-bottom: 0;
+}
+
+.prof {
+    border-radius: 50%;
+    margin-left: 5%;
+    margin-right: 75%;
+    object-fit: cover;
+    width: 15vw;
+    height: 15vw;
+}
+
+.name1 {
+    text-align: center;
+    color: white;
+}
+
+.phone-heading {
+    margin-left: 5px;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .rectangle {
+        position: static;
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 20px;
+        animation: slideInRight 1s forwards;
+    }
+
+    .container {
+        margin-left: 0;
+        width: 100%;
+        top: 0;
+    }
+}
+
+.button-container {
+    background-color: rgba(0, 0, 0, 0.514);
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 20px;
+    transition: all 0.3s;
+    position: fixed;
+    bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    margin: 0 5px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: rgba(31, 27, 27, 0.514);
+    transition: all 0.3s;
+    color: white;
+}
+
+button:hover {
+    background-color: cyan;
+    animation: bounce 0.5s;
+}

@@ -1,10 +1,10 @@
 // Ensure the function is correctly defined
 function vibrateOnClick() {
     if (navigator.vibrate) {
-        navigator.vibrate(1000); // Vibrate for 100 milliseconds
+        navigator.vibrate(100); // Vibrate for 100 milliseconds
     } else {
         alert("Vibration API is not supported on this device.");
-    }
+    }s
 }
 
 // Optional: Add event listeners programmatically
